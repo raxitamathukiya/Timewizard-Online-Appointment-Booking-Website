@@ -106,3 +106,13 @@ document.querySelector("#bt").addEventListener("click", function () {
 
   })
 
+// let calender=document.getElementById('calender')
+
+// calender.addEventListener("click",()=>{
+
+//   window.location='./calender.html'
+// })
+
+function calender(){
+  window.location='./calender.html'
+}

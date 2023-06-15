@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Style/Resources.css">
-    <title>Resources</title>
+    <link rel="stylesheet" href="./Style/calender.css">
+    <title>TimeWizard Calender</title>
 </head>
 <body>
     <div id="navbar">
@@ -112,79 +112,100 @@
     
     
       </div>
-    
-      <!-- All Resources -->
+    </div>
 
-      <div class="Resources">
-            <div  id="calender" onclick="calender()"><img src="./Image/Scheduling.png" alt="">
-            <p>Scheduling Meetings</p>
+    <div class="container">
+        <div class="calendar">
+            <div class="calendar-header">
+                <span class="month-picker" id="month-picker">May</span>
+                <div class="year-picker" id="year-picker">
+                    <span class="year-change" id="pre-year">
+                        <pre><</pre>
+                    </span>
+                    <span id="year">2023</span>
+                    <span class="year-change" id="next-year">
+                        <pre>></pre>
+                    </span>
+                </div>
             </div>
-            <div  id="calender" onclick="calender()"><img src="./Image/sells.png" alt=""><p>Sales And Demo Calls</p></div>
-            <div  id="calender"  onclick="calender()"><img src="./Image/customer_support.png" alt=""><p>Customer Support</p></div>
-            <div  id="calender"  onclick="calender()"><img src="Image/interview.png" alt=""><p>Interviews and Hiring</p></div>
-            <div  id="calender"  onclick="calender()"><img src="./Image/webi-fotor-bg-remover-20230614174133.png" alt=""><p>Webinars and Workshops</p></div>
-            <div  id="calender"  onclick="calender()"><img src="./Image/services.png" alt=""><p>Personal and Professional services</p></div>
-            <div  id="calender"  onclick="calender()"><img src="./Image/education-fotor-bg-remover-20230614203937.png" alt=""><p>Education and Academic Services</p></div>
-            <div  id="calender"  onclick="calender()"><img src="./Image/helth-fotor-bg-remover-20230614204913.png" alt=""><p>Health or Medical Icon</p></div>
-      </div>
+            <div class="calendar-body">
+                <div class="calendar-week-days">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="calendar-days"></div>
+            </div>
+            <div class="calendar-Footer"></div>
+            <div class="date-time-formate">
+                <div class="day-text-formate">TODAY</div>
+                <div class="date-time-value">
+                    <div class="time-formate">02:51:20</div>
+                    <div class="date-formate">15 - jun - 2023</div>
+                </div>
+            </div>
+            <div class="month-list"></div>
+        </div>
+    </div>  
+    <footer class="footer">
+        <div class="container1">
+            <div class="row">
 
-    
-    
-        <footer class="footer">
-             <div class="container">
-                 <div class="row">
-    
-                     <div class="footer-col">
-                         <h4>About</h4>
-                         <ul>
-                             <li><a href="#">About Calendly</a></li>
-                             <li><a href="#">Contack Sales</a></li>
-                             <li><a href="#">Newsroom</a></li>
-                             <li><a href="#">Careers</a></li>
-                             <li><a href="#">Security</a></li>
-                   
-                         </ul>
-                         
-                     </div>
-                     
-                     <div class="footer-col">
-                        <h4>Solution</h4>
-                        <ul>
-                            <li><a href="#">Costomer Success</a></li>
-                            <li><a href="#">Sales</a></li>
-                            <li><a href="#">Recruiting</a></li>
-                            <li><a href="#">Information Technology</a></li>
-                            <li><a href="#">Marketing</a></li>
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">About Calendly</a></li>
+                        <li><a href="#">Contack Sales</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Security</a></li>
+              
+                    </ul>
+                    
+                </div>
                 
-                        </ul>
+                <div class="footer-col">
+                   <h4>Solution</h4>
+                   <ul>
+                       <li><a href="#">Costomer Success</a></li>
+                       <li><a href="#">Sales</a></li>
+                       <li><a href="#">Recruiting</a></li>
+                       <li><a href="#">Information Technology</a></li>
+                       <li><a href="#">Marketing</a></li>
+           
+                   </ul>
+                   
+               </div>
+                <div class="footer-col">
+                    <h4>Popular Feature
+                    </h4>
+                    <ul>
+                        <li><a href="#">Embed Calendly</a></li>
+                        <li><a href="#">Evailability</a></li>
+                        <li><a href="#">Sending Notification</a></li>
+                        <li><a href="#">Using Calendly Mobile</a></li>
                         
-                    </div>
-                     <div class="footer-col">
-                         <h4>Popular Feature
-                         </h4>
-                         <ul>
-                             <li><a href="#">Embed Calendly</a></li>
-                             <li><a href="#">Evailability</a></li>
-                             <li><a href="#">Sending Notification</a></li>
-                             <li><a href="#">Using Calendly Mobile</a></li>
-                             
-                         </ul>
-                     </div>
-                     <div class="footer-col">
-                         <h4>Support and Other</h4>
-                         <ul>
-                             <li><a href="#">Help Center</a></li>
-                             <li><a href="#">Video Tutorials</a></li>
-                             <li><a href="#">Download for crome</a></li>
-                             <li><a href="#">Download for Firefox</a></li>
-                             <li><a href="#">Developer Tools</a></li>
-                         </ul>
-                     </div>
-                     
-                 </div>
-             </div>
-        </footer>
-      
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support and Other</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Video Tutorials</a></li>
+                        <li><a href="#">Download for crome</a></li>
+                        <li><a href="#">Download for Firefox</a></li>
+                        <li><a href="#">Developer Tools</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+   </footer>
 </body>
-<script src="./Script/Resources.js"></script>
+<script src="./Script/calender.js"></script>
 </html>
+
