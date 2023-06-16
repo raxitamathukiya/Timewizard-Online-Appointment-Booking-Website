@@ -177,6 +177,7 @@ const generateCalender=(month,year)=>{
 
     for(let i=0;i<=days_of_month[month]+first_day.getDay()-1;i++){
         let day=document.createElement('div')
+     
         if(i>=first_day.getDay()){
             day.innerHTML=i-first_day.getDay()+1
             if(i-first_day.getDay()+1===currentDate.getDate()&& year ===currentDate.getFullYear()&& month === currentDate.getMonth()){
@@ -184,7 +185,24 @@ const generateCalender=(month,year)=>{
             }
         }
         calendar_days.appendChild(day)
+        day.addEventListener("click",()=>{
+          //console.log(+(day.textContent),month,year)
+          // var dateString = "15 5 2023";
+          // var dateComponents = dateString.split(" ");
+          // var day = parseInt(dateComponents[0]);
+          // var month = parseInt(dateComponents[1]) - 1; // Months in JavaScript are zero-based (0-11)
+          // var year = parseInt(dateComponents[2]);
+
+          var date = new Date(year, month, +(day.textContent));
+
+          let obj={
+            "date":date
+          }
+          console.log(obj)
+        })
     }
+   
+  
 }
 
 
@@ -202,6 +220,8 @@ month_names.forEach((e,index)=>{
         timeFormate.classList.add('showtime')
         dateFormate.classList.remove('hideTime')
         dateFormate.classList.add('showtime')
+        month_list.classList.add('hideonce')
+        
     }
     
 
@@ -233,7 +253,7 @@ const showCurrentDateOption={
     day:'numeric',
     weekday:'long'
 }
-console.log(showCurrentDateOption)
+
 const currrentDateFormate=new Intl.DateTimeFormat(
     'en-US',
     showCurrentDateOption
@@ -255,3 +275,4 @@ const currrentDateFormate=new Intl.DateTimeFormat(
     (function (){
         month_list.classList.add('hideonce')
     })();
+
