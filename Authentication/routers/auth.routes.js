@@ -34,7 +34,7 @@ authRoute.get('/auth/google/success', (req, res) => {
   //res.send("successfully login",userProfile) 
   //res.redirect("/") 
   //res.redirect('/success');
-}) 
+}) //
 authRoute.get('/profile', (req, res) => res.send(userProfile));
 const GOOGLE_CLIENT_ID = "993273098507-li9fto57832qa3l9vu8gf2jjcncra4d1.apps.googleusercontent.com"
 const GOOGLE_CLIENT_SECRET = "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"
