@@ -1,78 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="nav.css">
-	
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+		integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
 
 </head>
+
 <body>
-	
-<nav class="navbar">
-	<div class="main-nav">
-		<div class="logo-only">
-			<a href="#">
-				<img src="https://assets.calendly.com/assets/frontend/media/logo-square-cd364a3c33976d32792a.png" alt="logo">
-			</a>
-		</div>
-		<div class="rest-content">
-			<div class="nav-con">
-				<ul class="list-first-down">
-					<li><a href="">Home</a></li>
-					<li><a href="">Availability</a></li>
-					<li><a href="">Integrations</a></li>
-					<li class="help-dropdown"><a href="">Help</a> 
-					<ul>
-						<li>Help Center</li>
-						<li>Chat with us</li>
+
+	<nav class="navbar">
+		<div class="main-nav">
+			<div class="logo-only">
+				<a href="#">
+					<img src="https://assets.calendly.com/assets/frontend/media/logo-square-cd364a3c33976d32792a.png"
+						alt="logo">
+				</a>
+			</div>
+			<div class="rest-content">
+				<div class="nav-con">
+					<ul class="list-first-down">
+						<li><a href="">Home</a></li>
+						<li><a href="">Availability</a></li>
+						<li><a href="">Integrations</a></li>
+						<li class="help-dropdown"><a href="">Help</a>
+							<ul>
+								<li>Help Center</li>
+								<li>Chat with us</li>
+							</ul>
+
+						</li>
+						<li>
+							<a href="">
+								<img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="user"
+									style="height: 30px; width: 30px; ">
+							</a>
+							<a href="#" class="logout-btn">Log Out</a>
+						</li>
 					</ul>
-					
-					</li>
-					<li>
-						<a href="">
-							<img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="user" style="height: 30px; width: 30px; ">
-						</a>
-						<a href="#" class="logout-btn">Log Out</a>
-					</li>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div class="head-body">
+		<div class="main-head">
+			<div class="parent-container">
+				<div class="div1">
+					<a href="#">My calendly</a>
+				</div>
+				<div class="div2">
+					<button>Create</button>
+				</div>
+			</div>
+			<div class="page-down">
+				<ul>
+					<li><a href="#">Event Types</a></li>
+					<li><a href="#">Scheduled Events</a></li>
+					<li><a href="#">Workflows</a></li>
+					<li><a href="#">Routing</a></li>
+
 				</ul>
 			</div>
 		</div>
-	</div>
-</nav>
 
-<div class="head-body">
-	<div class="main-head">
-		<div class="parent-container">
-			<div class="div1">
-			  <a href="#">My calendly</a>
+		<!-- <div id="event-types">
+			<div class="event-1">
+				<i class="fa-solid fa-magnifying-glass fa-rotate-90"></i><input type="text" name="" id="filter-input"
+					placeholder="Filter">
 			</div>
-			<div class="div2">
-			  <button>Create</button>
+		</div> -->
+
+		<!-- <div id="scheduled-events">
+
+		</div> -->
+
+		<div id="Workflows">
+			<div class="note1">
+				On 28 June 2023 your trial period expires and you’ll be downgraded to a Basic free subscription. Upgrade
+				your subscription to keep workflows and other features from your trial period.
 			</div>
-		  </div>
-		  <div class="page-down">
-			<ul>
-				<li><a href="#">Event Types</a></li>
-				<li><a href="#">Scheduled Events</a></li>
-				<li><a href="#">Workflows</a></li>
-				<li><a href="#">Routing</a></li>
-				
-			</ul>
-		  </div>
-</div>
+			<div class="note2">
+				<div>
+					<h1>Save time with workflows</h1>
+					<p>Automate all the work you do around events, such as text messages when events are booked, email
+						reminders before events, and more. You can start with a commonly used workflow or create your
+						own.</p>
+				</div>
+				<div>
+					<img src="https://assets.calendly.com/assets/frontend/media/workflows_octobot-055f878d6e0c1e2e1f3d.svg"
+						alt="">
+				</div>
+			</div>
 
-<div id="event-types">
-  <div class="event-1">
-	<i class="fa-solid fa-magnifying-glass fa-rotate-90"></i><input type="text" name="" id="filter-input" placeholder="Filter" >
-  </div>
-</div>
+			<div class="card-top">
+				<p>Start with one of the common workflows below or create your own.</p>
+				<button>Create your own workflow</button>
+			</div>
+
+			<div class="cards">
+				<div>
+					<img src="https://assets.calendly.com/assets/frontend/media/icon-reminder-email-01d90ee436d6262a4333.svg"
+						alt="" class="host-cards">
+					<h3>Email remainder to invitee</h3>
+					<p>Reduce no-shows — send automated email reminders to invitees</p>
+					<button>Use Workflow</button>
+				</div>
+				<div>
+					<img src="https://assets.calendly.com/assets/frontend/media/icon-reminder-email-01d90ee436d6262a4333.svg"
+						alt="" class="host-cards">
+					<h3>Email remainder to invitee</h3>
+					<p>Never miss an event — get automated email reminders</p>
+					<button>Use Workflow</button>
+				</div>
+				<div>
+					<img src="https://assets.calendly.com/assets/frontend/media/icon-thank-you-email-8dcb7866f89f6456e23d.svg"
+						alt="" class="host-cards">
+					<h3>Send thank you email</h3>
+					<p>Build relationships with a quick thanks</p>
+					<button>Use Workflow</button>
+				</div>
+				<div>
+					<img src="https://assets.calendly.com/assets/frontend/media/icon-reminder-text-1a4c73630b7c99f2e868.svg"
+						alt="" class="host-cards">
+					<h3>Text remainder to host</h3>
+					<p>Never miss an event — set automated text reminders</p>
+					<button>Use Workflow</button>
+				</div>
+				<div><img
+						src="https://assets.calendly.com/assets/frontend/media/icon-confirmation-text-4f8d899a89288fc00bd0.svg"
+						alt="" class="host-cards">
+					<h3>Text Booking confirmation to host</h3>
+					<p>Keep hosts up-to-date with scheduled events</p>
+					<button>Use Workflow</button>
+				</div>
+				<div><img
+						src="https://assets.calendly.com/assets/frontend/media/icon-survey-email-72c13882da56ae29b3af.svg"
+						alt="" class="host-cards">
+					<h3>Email your own feedback survery</h3>
+					<p>Email a survey link from a third party like Typeform or Google Forms to get feedback from
+						invitees after your event</p>
+					<button>Use Workflow</button>
+				</div>
+			</div>
+
+
+			<div class="show-more">
+				<button>Show more</button>
+			</div>
+		</div>
+
+		<div id="Routing">
+
+		</div>
 
 
 
-	  
 </body>
 
 </html>

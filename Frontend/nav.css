@@ -1,31 +1,30 @@
-*{
+* {
 	/* height: 100%; */
 	width: 100%;
 	margin: 0%;
 	padding: 0%;
 }
 
-a{
+a {
 	text-decoration: none;
 	color: black;
 }
-ul{
+
+ul {
 	list-style: none;
 }
 
-ul li{
+ul li {
 	line-height: 1.5;
 }
 
-.navbar{
-	height: 90px ;
+.navbar {
+	height: 90px;
 	border: 1px solid;
-position: sticky;
-top: 0;
-z-index: 100;
+
 }
 
-.main-nav{
+.main-nav {
 	/* border: 1px solid; */
 	height: 100%;
 	width: 70%;
@@ -34,29 +33,29 @@ z-index: 100;
 	/* position: sticky; */
 }
 
-.logo-only{
+.logo-only {
 	/* border: 1px solid; */
 	width: 40%;
-display: flex;
-align-items: center;
+	display: flex;
+	align-items: center;
 
 }
 
-.logo-only  a {
+.logo-only a {
 	height: 40px;
 	width: 40px;
 	/* border: 1px solid; */
 }
 
 
-.rest-content{
+.rest-content {
 	/* border: 1px solid; */
 	width: 60%;
 	display: flex;
 	place-items: center;
 }
 
-.nav-con{
+.nav-con {
 	height: 40px;
 	/* padding: 10px; */
 	font-size: 20px;
@@ -65,69 +64,69 @@ align-items: center;
 	/* border: 1px solid; */
 }
 
-.list-first-down{
+.list-first-down {
 	list-style: none;
 	display: inline-flex;
-	padding:7px
+	padding: 7px
 }
 
-.help-dropdown ul{
+.help-dropdown ul {
 	margin-top: 10px;
 	display: none;
 }
 
-.help-dropdown ul li:nth-child(1){
+.help-dropdown ul li:nth-child(1) {
 	/* display: none; */
 	border: 1px solid;
-	padding-left:10px ;
+	padding-left: 10px;
 	border-radius: 10px 10px 0px 0px;
-border-bottom: 0px;
+	border-bottom: 0px;
 }
 
 
-.help-dropdown ul li:nth-child(2){
+.help-dropdown ul li:nth-child(2) {
 	/* display: none; */
 	border: 1px solid;
 	border-top: 0px solid;
-	padding-left:10px ;
+	padding-left: 10px;
 	border-radius: 0px 0px 10px 10px;
 
 }
 
 .help-dropdown:hover ul {
 	cursor: pointer;
-	display:block ;
+	display: block;
 	/* border: 1px solid; */
 	background-color: whitesmoke;
 	/* position: absolute; */
 }
 
-.logout-btn{
+.logout-btn {
 	font-size: 25px;
-	margin:0%;
+	margin: 0%;
 	font-weight: bold;
 	color: black;
 	border-bottom: 2px solid transparent;
 	transition: border-bottom 0.3s ease;
 }
 
-.logout-btn:hover{
+.logout-btn:hover {
 	cursor: pointer;
 	border-bottom: 2px solid #000;
 }
 
-.head-body{
+.head-body {
 	/* border-bottom: 0.5px solid; */
-	box-shadow:inset rgba(0, 0, 0, 0.35) 0px 0px 5px;
+	box-shadow: inset rgba(0, 0, 0, 0.35) 0px 0px 5px;
 	height: 180px;
 }
 
-.main-head{
+.main-head {
 	/* border: 1px solid; */
 	width: 70%;
 	margin: auto;
 	height: 100%;
-	
+
 }
 
 .parent-container {
@@ -135,20 +134,20 @@ border-bottom: 0px;
 	justify-content: space-between;
 	height: 60%;
 	/* border:  1px solid; */
-  }
-  
- 
-  
-  .div1 a {
+}
+
+
+
+.div1 a {
 	text-decoration: none;
 	color: #333;
 	position: relative;
 	top: 40%;
 	font-weight: bold;
 	font-size: 30px;
-  }
-  
-  .div2 button {
+}
+
+.div2 button {
 	cursor: pointer;
 	height: 50px;
 	width: 100px;
@@ -163,68 +162,225 @@ border-bottom: 0px;
 	background-color: rgb(0, 105, 255);
 
 	color: white;
-  }
-  .div2 button:hover{
-	background-color:  rgb(4, 94, 221);
-  }
+}
 
-  .page-down ul {
+.div2 button:hover {
+	background-color: rgb(4, 94, 221);
+}
+
+.page-down ul {
 	display: flex;
 	position: relative;
 	top: 35px;
 	/* padding: 10px; */
-  }
-  .page-down ul li{
+}
+
+.page-down ul li {
 	/* width: 25%/; */
 	width: 180px;
 	font-size: 20px;
 	height: 30px;
 
-  }
+}
 
-  .page-down ul li a{
+.page-down ul li a {
 	color: rgb(94, 94, 94);
 	padding: 10px;
-  }
+}
 
-  .page-down ul li a:hover,a:hover{
-	border-bottom: 3px solid  rgb(0, 105, 255);
+.page-down ul li a:hover,
+a:hover {
+	border-bottom: 3px solid rgb(0, 105, 255);
 	color: black;
-  }
+}
 
 
-  #event-types{
+#event-types {
 	border: 1px solid;
 	height: 400px;
-  }
+	display: none;
+}
 
-  .event-1{
+.event-1 {
 	border: 1px solid;
 	width: 70%;
 	/* height: 100%; */
 	margin: auto;
 	margin-top: 20px;
 	padding: 20px;
-  }
+}
 
-  .event-1 svg{
+.event-1 svg {
 	width: 20px;
 	display: inline-block;
-  }
-  #filter-input{
+}
+
+#filter-input {
 	height: 30px;
 	font-size: 20px;
 	margin-left: 20px;
 	position: relative;
-	
+
 	outline: none;
 	border: none;
-  }
-  
-  
-  
+}
 
+/* workFlows */
+
+#Workflows {
+	height: fit-content;
+	/* border: 1px solid; */
+	width: 70%;
+	margin: auto;
+}
+
+
+.note1 {
+	margin-top: 20px;
+	font-size: 20px;
+	/* text-align: center; */
+	padding: 18px;
+	width: 96%;
+	border: 3px solid rgb(0, 105, 255);
+	border-radius: 10px;
+}
+
+.note2 {
+	display: flex;
+	width: 98%;
+	border-bottom: 1px solid;
+	padding: 10px;
+	font-size: 22px;
+	line-height: 1.2;
+	height: 230px;
+}
+
+.note2 h1 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.note2 div:nth-child(1) {
+	width: 145%;
+	/* border: 1px solid; */
+	padding: 10px;
+}
+
+.note2 div:nth-child(2) {
+	/* border: 1px solid; */
+	padding: 0%;
+}
+
+.note2 img {
+	height: 100%;
+
+}
+
+
+.card-top {
+	display: flex;
+	font-size: 20px;
+	padding: 10px;
+	justify-content: center;
+	width: fit-content;
+	margin-top: 20px;
+	/* border: 1px solid; */
+
+	width: 98%;
+}
+
+.card-top button {
+	width: 30%;
+	background-color: white;
+	color: rgb(0, 105, 255);
+	border: 1px solid rgb(0, 105, 255);
+	border-radius: 10px;
+}
+
+.card-top button:hover {
+	background-color: rgb(0, 105, 255);
+	color: white;
+	cursor: pointer;
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	/* width: 100%; */
+}
+
+.cards div {
+	/* border: 1px solid; */
+	height: 220px;
+	padding: 10px;
+	width: 310px;
+	margin-top: 20px;
+	position: relative;
+	border-radius: 10px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+}
+
+.cards div button {
+	width: 40%;
+	background-color: rgb(0, 105, 255);
+	color: white;
+	height: 35px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	font-size: 18px;
+	border-radius: 20px;
+	border: none;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	/* position: relative;
+	bottom: auto; */
+	/* margin: auto; */
+}
+
+.cards div button:hover {
+	background-color: rgb(8, 94, 215);
+	cursor: pointer;
+}
+
+.host-cards {
+	height: 50px;
+	width: 50px;
+	padding: 5px;
+}
+
+.cards div p {
+	font-size: 18px;
+	margin: 10px 0px;
+	line-height: 1.16;
+}
+
+.show-more {
+	position: relative;
+	height: 150px;
+}
+
+
+.show-more button {
+	width: 150px;
+	font-size: 20px;
+	border-radius: 20px;
+	margin: 20px 0px;
+	text-align: center;
+	background-color: white;
+	padding: 10px;
+	position: absolute;
+	top: 40%;
+	right: 40%;
+
+}
+
+.show-more button:hover {
+	cursor: pointer;
+	background-color: #dcdada;
+
+}
 
 /* rest-content  */
-
-
