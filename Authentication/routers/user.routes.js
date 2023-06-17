@@ -11,13 +11,13 @@ const userrouter = express.Router();
 
 // Sign in part is hare ...............................
 
-userrouter.post("/sign", async (req, res) => {
+userrouter.post("/register", async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
-    const auser = await usermodel.findOne({ email });
-
-    if (auser) {
+    const auser = await usermodel.find({email});
+   console.log(auser)
+    if (auser.length > 0) {
      return res.send({ "ok": false, "msg": "User Already exist" });
     } else{
       const hash = bcrypt.hashSync(password,3);
@@ -72,12 +72,12 @@ userrouter.post("/login", async (req, res) => {
 
     const user = await usermodel.findOne({ email });
     console.log(user);
-    if (!user) {
+    if (user.length<0) {
       res.send({"ok":false, "msg": "User Not found, Please Register First" });
     } else {
       bcrypt.compare(password, user.password, (err, result) => {
         if (result) {
-          let token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
+          let token = jwt.sign({ userId: user._id,name:user.name }, process.env.JWT_SECRET, {
             expiresIn: "30m",
           });
 
