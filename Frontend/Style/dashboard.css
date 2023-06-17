@@ -1,6 +1,21 @@
 body, html {
     height:100%;
   }
+
+
+  .navbar-brand{
+    height: 40px;
+    width: 40px;
+    
+  }
+
+  .navbar-brand img{
+    border-radius: 50% 45% ;
+  }
+  .navbar-brand:hover{
+    cursor: pointer;
+
+  }
   
   /*
    * Off Canvas sidebar at medium breakpoint
