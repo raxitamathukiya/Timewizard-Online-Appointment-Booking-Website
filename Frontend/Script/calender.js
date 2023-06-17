@@ -185,20 +185,27 @@ const generateCalender=(month,year)=>{
             }
         }
         calendar_days.appendChild(day)
-        day.addEventListener("click",()=>{
-          //console.log(+(day.textContent),month,year)
-          // var dateString = "15 5 2023";
-          // var dateComponents = dateString.split(" ");
-          // var day = parseInt(dateComponents[0]);
-          // var month = parseInt(dateComponents[1]) - 1; // Months in JavaScript are zero-based (0-11)
-          // var year = parseInt(dateComponents[2]);
-
+        day.addEventListener("click",async()=>{
+         try {
           var date = new Date(year, month, +(day.textContent));
-
           let obj={
-            "date":date
+            Date:date
           }
-          console.log(obj)
+          let res=await fetch("http://localhost:8080/appointment/date",{
+            method:"POST",
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify(obj)
+          })
+          let data=await res.json()
+          alert(data.message)
+          window.location='./userform.html'
+
+         } catch (error) {
+          console.log(error)
+         }
+          
         })
     }
    

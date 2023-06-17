@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Style/calender.css">
+    <link rel="stylesheet" href="./Style/Resources.css">
+    <link rel="stylesheet" href="./Style/contectform.css">
     <link rel="icon" href="./Image/timewizard_logo1.png">
-    <title>TimeWizard Calender</title>
+    <title>TimeWizard</title>
 </head>
 <body>
     <div id="navbar">
@@ -113,100 +114,93 @@
     
     
       </div>
-    </div>
+    
+      <!-- Form -->
 
-    <div class="container">
-        <div class="calendar">
-            <div class="calendar-header">
-                <span class="month-picker" id="month-picker">May</span>
-                <div class="year-picker" id="year-picker">
-                    <span class="year-change" id="pre-year">
-                        <pre><</pre>
-                    </span>
-                    <span id="year">2023</span>
-                    <span class="year-change" id="next-year">
-                        <pre>></pre>
-                    </span>
-                </div>
-            </div>
-            <div class="calendar-body">
-                <div class="calendar-week-days">
-                    <div>Sun</div>
-                    <div>Mon</div>
-                    <div>Tue</div>
-                    <div>Wed</div>
-                    <div>Thu</div>
-                    <div>Fri</div>
-                    <div>Sat</div>
-                </div>
-                <div class="calendar-days"></div>
-            </div>
-            <div class="calendar-Footer"></div>
-            <div class="date-time-formate">
-                <div class="day-text-formate">TODAY</div>
-                <div class="date-time-value">
-                    <div class="time-formate">02:51:20</div>
-                    <div class="date-formate">15 - jun - 2023</div>
-                </div>
-            </div>
-            <div class="month-list"></div>
-        </div>
-    </div>  
-    <footer class="footer">
-        <div class="container1">
-            <div class="row">
-
-                <div class="footer-col">
-                    <h4>About</h4>
-                    <ul>
-                        <li><a href="#">About TimeWizard</a></li>
-                        <li><a href="#">Contack Sales</a></li>
-                        <li><a href="#">Newsroom</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Security</a></li>
-              
-                    </ul>
-                    
-                </div>
-                
-                <div class="footer-col">
-                   <h4>Solution</h4>
-                   <ul>
-                       <li><a href="#">Costomer Success</a></li>
-                       <li><a href="#">Sales</a></li>
-                       <li><a href="#">Recruiting</a></li>
-                       <li><a href="#">Information Technology</a></li>
-                       <li><a href="#">Marketing</a></li>
+       <div class="container">  
+        <form id="contact">
+          <h3></h3>
+       
+          <fieldset>
+            <input placeholder="Your Name" type="text" tabindex="1" id="name" autofocus>
            
-                   </ul>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Email Address" type="email" tabindex="2" id="email1" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Time" type="text" tabindex="3" id="time">
+          </fieldset>
+         
+          <fieldset>
+            <textarea placeholder="Additional Notes" tabindex="5" id="message"></textarea>
+          </fieldset>
+          <fieldset>
+            <button name="submit" type="submit" id="submit">Conform</button>
+          </fieldset>
+        
+        </form>
+      </div>
+
+    
+    
+        <footer class="footer">
+             <div class="container1">
+                 <div class="row">
+    
+                     <div class="footer-col">
+                         <h4>About</h4>
+                         <ul>
+                             <li><a href="#">About Calendly</a></li>
+                             <li><a href="#">Contack Sales</a></li>
+                             <li><a href="#">Newsroom</a></li>
+                             <li><a href="#">Careers</a></li>
+                             <li><a href="#">Security</a></li>
                    
-               </div>
-                <div class="footer-col">
-                    <h4>Popular Feature
-                    </h4>
-                    <ul>
-                        <li><a href="#">Embed TimeWizard</a></li>
-                        <li><a href="#">Evailability</a></li>
-                        <li><a href="#">Sending Notification</a></li>
-                        <li><a href="#">Using Calendly Mobile</a></li>
-                        
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Support and Other</h4>
-                    <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Video Tutorials</a></li>
-                        <li><a href="#">Download for crome</a></li>
-                        <li><a href="#">Download for Firefox</a></li>
-                        <li><a href="#">Developer Tools</a></li>
-                    </ul>
-                </div>
+                         </ul>
+                         
+                     </div>
+                     
+                     <div class="footer-col">
+                        <h4>Solution</h4>
+                        <ul>
+                            <li><a href="#">Costomer Success</a></li>
+                            <li><a href="#">Sales</a></li>
+                            <li><a href="#">Recruiting</a></li>
+                            <li><a href="#">Information Technology</a></li>
+                            <li><a href="#">Marketing</a></li>
                 
-            </div>
-        </div>
-   </footer>
+                        </ul>
+                        
+                    </div>
+                     <div class="footer-col">
+                         <h4>Popular Feature
+                         </h4>
+                         <ul>
+                             <li><a href="#">Embed Calendly</a></li>
+                             <li><a href="#">Evailability</a></li>
+                             <li><a href="#">Sending Notification</a></li>
+                             <li><a href="#">Using Calendly Mobile</a></li>
+                             
+                         </ul>
+                     </div>
+                     <div class="footer-col">
+                         <h4>Support and Other</h4>
+                         <ul>
+                             <li><a href="#">Help Center</a></li>
+                             <li><a href="#">Video Tutorials</a></li>
+                             <li><a href="#">Download for crome</a></li>
+                             <li><a href="#">Download for Firefox</a></li>
+                             <li><a href="#">Developer Tools</a></li>
+                         </ul>
+                     </div>
+                     
+                 </div>
+             </div>
+        </footer>
+      
 </body>
-<script src="./Script/calender.js"></script>
+<script src="./Script/userform.js"></script>
+
 </html>
 
