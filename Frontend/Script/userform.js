@@ -1,10 +1,10 @@
-let btn=document.getElementById("submit")
+let btn=document.querySelector("form")
 let name=document.getElementById("name")
 let email=document.getElementById("email1")
 let message=document.getElementById("message")
 let time=document.getElementById("time")
 
-btn.addEventListener("click",async(e)=>{
+btn.addEventListener("submit",async(e)=>{
     e.preventDefault()
     try {
        let obj={
@@ -13,16 +13,17 @@ btn.addEventListener("click",async(e)=>{
         message:message.value,
         time:time.value
        } 
-    //    let res=await fetch("",{
-    //     method:"POST",
-    //     headers:{
-    //         'Content-Type':'application/json'
-    //     },
-    //     body:JSON.stringify(obj)
+       let res=await fetch("https://timewizard-backend.onrender.com/conform/add",{
+        method:"POST",
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify(obj)
 
 
-    //    })
-    //    let data=await res.json()
+       })
+       let data=await res.json()
+       alert(data.message)
        window.location='./conform.html'
       
     } catch (error) {

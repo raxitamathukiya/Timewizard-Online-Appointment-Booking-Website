@@ -191,7 +191,7 @@ const generateCalender=(month,year)=>{
           let obj={
             Date:date
           }
-          let res=await fetch("http://localhost:8080/appointment/date",{
+          let res=await fetch("https://timewizard-backend.onrender.com/appointment/date",{
             method:"POST",
             headers:{
                 'Content-Type':'application/json'

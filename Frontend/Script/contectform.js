@@ -18,7 +18,7 @@ btn.addEventListener("submit",async(e)=>{
             time:time.value
            } 
     
-        let res = await fetch(`http://localhost:8080/contect/add`, {
+        let res = await fetch(`https://timewizard-backend.onrender.com/contect/add`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
