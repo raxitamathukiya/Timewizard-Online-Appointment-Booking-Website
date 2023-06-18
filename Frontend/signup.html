@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TimeWizard</title>
+    <link rel="icon" href="./Image/timewizard_logo1.png">
+    <link rel="stylesheet" href="./Style/reset.css" />
+    <link rel="stylesheet" href="./Style/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon_io/favicon-16x16.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c8626bb222.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+  </head>
+  <body>
+    <main id="main">
+      <div class="page-container">
+        <div class="grid-container">
+          <div class="left-side">
+            <div class="img-and-text">
+              <img
+                class="cart-illustration"
+                src="./Image/twlogo.png"
+                alt="" style="width:50%"
+              />
+              <!-- <h1>Start for free and get attractive offers.</h1> -->
+            </div>
+          </div>
+          <div class="right-side">
+            <div class="wrapper">
+              <h2>Get started.</h2>
+              <p>Already have an account? <a href="./login.html">Log in</a></p>
+              <div class="sign-up-buttons">
+                <button id="sign-up">
+                  <img src="./Image/google-icon.png" /> Sign up with Google
+                </button>
+                <button id="sign-up-facebook">
+                  <img src="./Image/icons8-github-30.png" width="20px" /> Sign
+                  up with Github
+                </button>
+              </div>
+              <p class="socials-divider"><span>or</span></p>
+
+              <form action="">
+                <label for="name">Enter your Name</label>
+                <div class="email-input-container">
+                  <i class="fa-regular fa-user icon-email"></i>
+                  <input
+                    type="name"
+                    name="full_name"
+                    placeholder="Enter your name"
+                    id="name"
+                  />
+                </div>
+                <label for="email">Email address</label>
+                <div class="email-input-container">
+                  <i class="fi fi-rr-envelope icon-email"></i>
+                  <input
+                    type="email"
+                    name="email_address"
+                    placeholder="exemple@gmail.com"
+                    id="email"
+                  />
+                </div>
+                <label for="password">Password</label>
+
+                <div class="password-input-container">
+                  <i class="fi fi-rr-lock icon-password"></i>
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Your password"
+                    id="password" 
+                  />
+                </div>
+              </form>
+
+              <div class="agreement-check">
+                <input
+                  type="checkbox"
+                  name="terms_of_service_and_privacy_policy"
+                  required
+                />
+                <span class="terms-of-use-text"
+                  >I agree to Plataform's <a href="#">Terms of Service</a> and
+                  <a href="#">Privacy Policy</a>
+                </span>
+              </div>
+
+              <button id="register-button" type="submit">Register</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+<script src="./Script/signup.js"></script>
+<script>
+  const googleUrl =
+    "https://time-wizard.onrender.com/auth/google";
+  const githubUrl =
+    "https://github.com/login/oauth/authorize?client_id=7985eda3cc93ebd0ce4a&scope=user:email";
+
+  let googleBtn = document.getElementById("sign-up");
+  let githubBtn = document.getElementById("sign-up-facebook");
+
+
+
+
+
+
+
+  // google Oauth ----------------------->
+  googleBtn.addEventListener("click", async () => {
+    try {
+      window.location.href = googleUrl;
+      window.location='./index.html' 
+
+      setTimeout(async() => {
+        const cookies =document.cookie.split(";");
+      for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim().split("=");
+        const name = cookie[0];
+        const value = cookie[1];
+        // append cookie data to the DOM
+        console.log(value);
+        const data = decodeURIComponent(value);
+        const userInfoObj = JSON.parse(data);
+        // console.log(userInfoObj.name);
+        await localStorage.setItem("userDetails", JSON.stringify(userInfoObj));
+        await localStorage.setItem("token", userInfoObj.accessToken);
+        await localStorage.setItem("signedIn",true);
+      }
+      }, 1000);
+     
+    } catch (error) {
+      console.log(error.message);
+    }
+  });
+
+
+  ////// git hub OAuth------------------------>
+  githubBtn.addEventListener("click",async()=>{
+    try {
+      window.location.href = githubUrl;
+      window.location='./index.html' 
+      setTimeout(async() => {
+        const cookies = document.cookie.split(";");
+      for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim().split("=");
+        const name = cookie[0];
+        const value = cookie[1];
+        // append cookie data to the DOM
+        console.log(value);
+        const data = decodeURIComponent(value);
+        const userInfoObj = JSON.parse(data);
+        // console.log(userInfoObj.name);
+        await localStorage.setItem("userDetails", JSON.stringify(userInfoObj));
+        await localStorage.setItem("token", userInfoObj.accessToken);
+        await localStorage.setItem("signedIn",true);
+      }
+      }, 1000);
+
+    
+      
+    } catch (error) {
+      console.log(error.message);
+    }
+  })
+</script>
