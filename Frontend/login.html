@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TimeWizard</title>
+    <link rel="stylesheet" href="./Style/login.css">
+    <link rel="icon" href="./Image/timewizard_logo1.png">
+    <title>Login Form | Time wizard</title>
+    <link rel="stylesheet" href="./Style/login.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+
+</head>
+<body>
+
+    <div class="main-wrap">
+        <div class="box-container">
+            <div class="img-box" >
+               <img src="./Image/twlogo.png" alt="error" style="margin-top: 40%;width:40%">
+            </div>
+            <div class="form-wrap">
+                <div class="top-signup">
+                    <span>Don't you have an account?</span>
+                    <a href="./signup.html" class="signup-btn">SIGN UP</a>
+                </div>              
+                <div class="mid-container">
+                    <h1>Welcome Back</h1>
+                    <h6>Login your Account</h6>
+                    <form action="" class="form">
+                        <label for="Username">Enter your email</label></br>
+                        <input type="email" name="username" id="lemail" placeholder="Your email"> 
+                        </br></br>
+                        <label for="Password">Password</label></br>
+                        <input type="password" name="password" id="lpass" placeholder="Your password">
+                        <br>
+                        <span><a href="./signup.html" class="fg-pass">Forgot password?</a></span>
+                        <br>
+                        <button type="submit" class="login-btn" id="login">Login</button>
+                    </form>
+                   
+                </div>
+                <div class="login-with">
+                    <span>Login with</span> 
+                    <a href="https://time-wizard.onrender.com/auth/google" ><img src="./Image/google-icon.png" alt=""></a>
+              <a href="https://github.com/login/oauth/authorize?client_id=7985eda3cc93ebd0ce4a&scope=user:email"><img src="./Image/icons8-github-30.png" width="20px"></a>
+            
+                    <!-- <<a href="https://facebook.com/"><img src="images/fb.png" alt=""></a>
+                    <a href=""><img src="images/google.png" alt=""></a>
+                    <a href="https://twitter.com/"><img src="images/twitter.png" alt=""></a>> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
+<script src="./Script/login.js"></script>
