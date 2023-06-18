@@ -114,5 +114,5 @@ document.querySelector("#bt").addEventListener("click", function () {
 // })
 
 function calender(){
-  window.location='./calender.html'
+  window.location='./contectform.html'
 }
