@@ -2,7 +2,7 @@
 Website detail:To schedule a meeting, simply click the 'Schedule Meeting' button below and choose a convenient date and time from our available options. We offer flexible meeting arrangements, including in-person, online video calls, and phone meetings.
 You can see the landing page screenshot below
 
-Netlify_Link:https://timewizard1.netlify.app/
+Deployed Link :https://timewizard1.netlify.app/
 
 ![image](https://github.com/raxitamathukiya/medical-bells-7477/assets/36467733/49afaa78-8de4-4ab4-8728-f25cab36d0ce)
 
