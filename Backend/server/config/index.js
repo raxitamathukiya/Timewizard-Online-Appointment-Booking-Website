@@ -1,6 +1,6 @@
 const config = {
   db: {
-    url: 'localhost:27017',
+    url: 'mongodb+srv://raxitapatel:raxitapatel@cluster0.cy5hiqo.mongodb.net/TimeWizard?retryWrites=true&w=majority',
     name: 'chatdb'
   }
 }

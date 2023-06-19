@@ -12,7 +12,7 @@ const chatRoomSchema = new mongoose.Schema(
       type: String,
       default: () => uuidv4().replace(/\-/g, ""),
     },
-    userIds: Array,
+    userEmails: Array,
     type: String,
     chatInitiator: String,
   },
@@ -23,12 +23,12 @@ const chatRoomSchema = new mongoose.Schema(
 );
 
 /**
- * @param {String} userId - id of user
+ * @param {String} userEmail - id of user
  * @return {Array} array of all chatroom that the user belongs to
  */
-chatRoomSchema.statics.getChatRoomsByUserId = async function (userId) {
+chatRoomSchema.statics.getChatRoomsByUserId = async function (userEmail) {
   try {
-    const rooms = await this.find({ userIds: { $all: [userId] } });
+    const rooms = await this.find({ userEmails: { $all: [userEmail] } });
     return rooms;
   } catch (error) {
     throw error;
@@ -49,16 +49,16 @@ chatRoomSchema.statics.getChatRoomByRoomId = async function (roomId) {
 }
 
 /**
- * @param {Array} userIds - array of strings of userIds
+ * @param {Array} userEmails - array of strings of userEmails
  * @param {String} chatInitiator - user who initiated the chat
  * @param {CHAT_ROOM_TYPES} type
  */
-chatRoomSchema.statics.initiateChat = async function (userIds, type, chatInitiator) {
+chatRoomSchema.statics.initiateChat = async function (userEmails, type, chatInitiator) {
   try {
     const availableRoom = await this.findOne({
-      userIds: {
-        $size: userIds.length,
-        $all: [...userIds],
+      userEmails: {
+        $size: userEmails.length,
+        $all: [...userEmails],
       },
       type,
     });
@@ -71,7 +71,7 @@ chatRoomSchema.statics.initiateChat = async function (userIds, type, chatInitiat
       };
     }
 
-    const newRoom = await this.create({ userIds, type, chatInitiator });
+    const newRoom = await this.create({ userEmails, type, chatInitiator });
     return {
       isNew: true,
       message: 'creating a new chatroom',

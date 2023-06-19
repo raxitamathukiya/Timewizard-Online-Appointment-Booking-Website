@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 import config from './index.js'
 
-const CONNECTION_URL = `mongodb://${config.db.url}/${config.db.name}`
+const CONNECTION_URL = `mongodb+srv://raxitapatel:raxitapatel@cluster0.cy5hiqo.mongodb.net/TimeWizard?retryWrites=true&w=majority`
 
 mongoose.connect(CONNECTION_URL, {
   useNewUrlParser: true,

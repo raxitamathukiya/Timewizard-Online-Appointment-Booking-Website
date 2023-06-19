@@ -8,14 +8,11 @@ export const USER_TYPES = {
 
 const userSchema = new mongoose.Schema(
   {
-    _id: {
-      type: String,
-      default: () => uuidv4().replace(/\-/g, ""),
-    },
-    firstName: String,
-    lastName: String,
-    type: String,
-  },
+    name:{type:String},
+    email:{type:String},
+    password:{type:String},
+    oauth:{type:Object}
+},
   {
     timestamps: true,
     collection: "users",
@@ -37,13 +34,13 @@ userSchema.statics.createUser = async function (firstName, lastName, type) {
 }
 
 /**
- * @param {String} id, user id
+ * @param {String} email, user email
  * @return {Object} User profile object
  */
-userSchema.statics.getUserById = async function (id) {
+userSchema.statics.getUserById = async function (email) {
   try {
-    const user = await this.findOne({ _id: id });
-    if (!user) throw ({ error: 'No user with this id found' });
+    const user = await this.findOne({ email: email });
+    if (!user) throw ({ error: 'No user with this email found' });
     return user;
   } catch (error) {
     throw error;
@@ -68,7 +65,7 @@ userSchema.statics.getUsers = async function () {
  */
 userSchema.statics.getUserByIds = async function (ids) {
   try {
-    const users = await this.find({ _id: { $in: ids } });
+    const users = await this.find({ email: { $in: ids } });
     return users;
   } catch (error) {
     throw error;
@@ -81,7 +78,7 @@ userSchema.statics.getUserByIds = async function (ids) {
  */
 userSchema.statics.deleteByUserById = async function (id) {
   try {
-    const result = await this.remove({ _id: id });
+    const result = await this.remove({ email: email });
     return result;
   } catch (error) {
     throw error;
