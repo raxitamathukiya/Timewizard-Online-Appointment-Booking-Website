@@ -117,7 +117,7 @@ ul li {
 
 .head-body {
 	/* border-bottom: 0.5px solid; */
-	box-shadow: inset rgba(0, 0, 0, 0.35) 0px 0px 5px;
+
 	height: 180px;
 }
 
@@ -195,10 +195,10 @@ a:hover {
 }
 
 
-#event-types {
+#content1 {
 	border: 1px solid;
 	height: 400px;
-	display: none;
+	/* display: none; */
 }
 
 .event-1 {
@@ -225,13 +225,20 @@ a:hover {
 	border: none;
 }
 
-/* workFlows */
+#content2 {
+	border: 1px saddlebrown;
+	height: 200px;
+}
 
-#Workflows {
+/* content3 */
+
+#content3 {
 	height: fit-content;
 	/* border: 1px solid; */
 	width: 70%;
 	margin: auto;
+	/* display: none; */
+
 }
 
 
@@ -381,6 +388,112 @@ a:hover {
 	cursor: pointer;
 	background-color: #dcdada;
 
+}
+
+#content4 {
+	box-shadow: inset rgba(0, 0, 0, 0.35) 0px 0px 5px;
+	height: 400px;
+	/* display: none; */
+
+}
+
+#content4 {
+	padding: 20px;
+	height: 100%;
+	width: 70%;
+	margin: auto;
+	/* margin-top: 40px; */
+	border-top: #000;
+	/* border: 1px solid; */
+}
+
+.route-1,
+.route-2 {
+	height: 300px;
+	/* border: 1px solid; */
+	display: flex;
+	margin-top: 30px;
+
+}
+
+.route-1 div,
+.route-2 div {
+	width: 47%;
+	height: 300px;
+	/* margin: auto; */
+	/* border: 1px solid; */
+}
+
+.route-1 div:nth-child(1) {
+	padding: 0px 10px;
+	border-bottom: 1px solid rgb(161, 161, 161);
+}
+
+.route-1 h1 {
+	font-size: 28px;
+}
+
+.route-1 p {
+	font-size: 18px;
+	line-height: 1.26;
+}
+
+
+.route-1 div:nth-child(2) {
+	width: 53%;
+}
+
+.numbered-list {
+	list-style-type: decimal;
+}
+
+.blue {
+	color: rgb(8, 94, 215);
+}
+
+.form-btn {
+
+	color: rgb(8, 94, 215);
+	background-color: white;
+	border-radius: 20px;
+	font-size: 15px;
+	padding: 10px 15px;
+	margin-top: 25px;
+	border: 1px solid rgb(8, 94, 215);
+}
+
+.form-btn:hover {
+	background-color: rgb(8, 94, 215);
+	color: #f1f1f1;
+	cursor: pointer;
+}
+
+
+.content {
+	display: none;
+	/* Hide content by default */
+}
+
+.visible {
+	display: block;
+	/* Set the first content to be visible by default */
+}
+
+.selected {
+	/* font-weight: bold; */
+	/* Apply styling to the selected item if desired */
+}
+
+#card-section {
+	border: 1px solid;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+}
+
+#card-section div {
+	border: 1px solid;
+	height: 200px;
 }
 
 /* rest-content  */

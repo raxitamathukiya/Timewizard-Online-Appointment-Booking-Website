@@ -61,34 +61,44 @@
 			</div>
 			<div class="page-down">
 				<ul>
-					<li><a href="#">Event Types</a></li>
-					<li><a href="#">Scheduled Events</a></li>
-					<li><a href="#">Workflows</a></li>
-					<li><a href="#">Routing</a></li>
+					<li onclick="toggleContent(1)" class="selected"><a href="#">Event Types</a></li>
+					<li onclick="toggleContent(2)"><a href="#">Scheduled Events</a></li>
+					<li onclick="toggleContent(3)"><a href="#">Workflows</a></li>
+					<li onclick="toggleContent(4)"><a href="#">Routing</a></li>
 
 				</ul>
 			</div>
 		</div>
 
-		<!-- <div id="event-types">
+		<div id="content1" class="content">
 			<div class="event-1">
-				<i class="fa-solid fa-magnifying-glass fa-rotate-90"></i><input type="text" name="" id="filter-input"
-					placeholder="Filter">
+				<input type="text" name="" id="filter-input" placeholder="Filter">
 			</div>
-		</div> -->
+			<div id="card-section">
+				<div class="cards-1">
+					hello
+				</div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
 
-		<!-- <div id="scheduled-events">
+		<div id="content2" class="content">
 
-		</div> -->
+		</div>
 
-		<div id="Workflows">
+
+		<!-- <---------------------------------------------------content3------------------------------------>
+
+		<div id="content3" class="content visible">
 			<div class="note1">
 				On 28 June 2023 your trial period expires and you’ll be downgraded to a Basic free subscription. Upgrade
-				your subscription to keep workflows and other features from your trial period.
+				your subscription to keep content3 and other features from your trial period.
 			</div>
 			<div class="note2">
 				<div>
-					<h1>Save time with workflows</h1>
+					<h1>Save time with content3</h1>
 					<p>Automate all the work you do around events, such as text messages when events are booked, email
 						reminders before events, and more. You can start with a commonly used workflow or create your
 						own.</p>
@@ -100,7 +110,7 @@
 			</div>
 
 			<div class="card-top">
-				<p>Start with one of the common workflows below or create your own.</p>
+				<p>Start with one of the common content3 below or create your own.</p>
 				<button>Create your own workflow</button>
 			</div>
 
@@ -156,12 +166,59 @@
 			</div>
 		</div>
 
-		<div id="Routing">
+		<!-- <----------------------------------------Routing----------------------------------------------------->
+		<div>
+			<div id="content4" class="content">
+				<section class="route-1">
+					<div>
+						<h1>Qualify, route, and schedule meetings instantly</h1>
+						<p>Gather information from website visitors and direct them to a specific booking page based on
+							their responses. Learn more in our <b style="border-bottom: 1px solid;" class="blue"> Help
+								Center.</b></p><br>
+						<p>1. Create or import a <b class="blue">form</b> to set up questions</p>
+						<p>2. Set up <b class="blue">logic</b> to send invitees to a booking page and more</p>
+						<button style="width: 170px;" class="form-btn">New Routing form</button>
+					</div>
+					<div>
+						<img src="https://assets.calendly.com/assets/frontend/media/illustration_en-1cbc526450b708b13d59.svg"
+							alt="">
+					</div>
+				</section>
 
+			</div>
 		</div>
 
 
 
 </body>
+<script>
+	function toggleContent(contentId) {
+		// Hide all content elements
+		var contents = document.getElementsByClassName("content");
+		for (var i = 0; i < contents.length; i++) {
+			contents[i].classList.remove("visible");
+		}
+
+		// Show the selected content
+		var selectedContent = document.getElementById("content" + contentId);
+		selectedContent.classList.add("visible");
+
+		// Remove the 'selected' class from all li elements
+		var listItems = document.getElementsByTagName("li");
+		for (var i = 0; i < listItems.length; i++) {
+			listItems[i].classList.remove("selected");
+		}
+
+		// Add the 'selected' class to the clicked li element
+		var clickedItem = document.querySelector("li:nth-child(" + contentId + ")");
+		clickedItem.classList.add("selected");
+	}
+
+	// By default, show the content for the first item
+	toggleContent(1);
+
+
+</script>
+<script src="nav.js"></script>
 
 </html>
