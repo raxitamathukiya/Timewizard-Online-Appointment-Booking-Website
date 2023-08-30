@@ -610,7 +610,7 @@ html,body {
   @media (min-width:480px) and (max-width:999px) {
     #mid {
 
-      display: none;
+      
     }
     .p:before {
       width: 40%;
@@ -676,7 +676,7 @@ html,body {
   @media (min-width:0px) and (max-width:479px) {
     #mid {
 
-      display: none;
+      
     }
     #cont{
       width: 60%;
