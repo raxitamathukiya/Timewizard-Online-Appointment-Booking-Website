@@ -13,11 +13,26 @@
     <link href='https://css.gg/format-justify.css' rel='stylesheet'>
     <link rel="icon" href="./Image/timewizard_logo1.png">
 
-
+ 
 
     <!-- section 1 style part -->
     <style>
         @import url('http://fonts.cdnfonts.com/css/gilroy-bold');
+        #navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f0f0f0;
+    align-items: center;
+}
+
+#logoutBtn {
+    display: none; /* Initially hidden */
+}
+
+#username {
+    cursor: pointer;
+}
 
         #section_1{
             width: 100%;
@@ -525,7 +540,7 @@
           <li><a class="a" href="#">Individuals</a></li>
           <li><a class="a" href="#">Teams</a></li>
           <li><a class="a" href="#">Enterprise</a></li>
-  
+         <li><a class="a" href="./login.html" id="login">Login</a></li>
   
           <li>
             <a class="a" href="#">Product</a>
@@ -533,7 +548,8 @@
           </li>
           <li><a class="a" href="#">Pricing</a></li>
           <li><a class="a" href="./Resources.html">Resources</a></li>
-          <li><a  id="login" href="./login.html" style="text-decoration: none;">Login</a></li>
+          <!-- <li><a  id="login" href="./login.html" style="text-decoration: none;">Login</a></li>  -->
+          <li><button id="logoutBtn">Logout</button></li>
           <li><a href="./signup.html" style="text-decoration: none;">Get Started</a></li>
         </ul>
       </div>
@@ -551,7 +567,7 @@
             <div><a class="a" href="#">Product</a></div>
             <div><a class="a" href="#">Pricing</a></div>
             <div><a class="a" href="./login.html">login</a></div> 
-            <p>vhbhbj</p> 
+
             <!-- <div><a class="a" href="./signup.html"><button style="background-color: #006BFF;">Get Started today</button></a></div> -->
           <div><a href="./signup.html">G</a></div>
         </div>
@@ -2467,14 +2483,69 @@
 <script src="./Script/navbar.js"></script>
 
 <script>
-    const login = document.getElementById("login") 
-    const token =localStorage.getItem("token")
-    const name=localStorage.getItem("name")
-   if(token==null){
-    login.innerText="login"
-   }else{
-    login.innerText=name
-   }
+    
+    const loginElement = document.getElementById("login");
+const logoutButton = document.getElementById("logoutBtn");
+const token = localStorage.getItem("token");
+const name = localStorage.getItem("name");
+
+function showLoggedInUI() {
+    loginElement.innerText = name;
+    logoutButton.style.display = "block";
+    loginElement.style.pointerEvents = "none"; // Disable clicking on the name
+
+    logoutButton.addEventListener("click", () => {
+        localStorage.removeItem("token");
+        localStorage.removeItem("name");
+        window.location.href = './login.html'; // Redirect to login page after logout
+    });
+}
+
+function showLoggedOutUI() {
+    loginElement.innerText = "Login";
+    logoutButton.style.display = "none";
+    loginElement.style.pointerEvents = "auto"; // Enable clicking on the name
+}
+
+if (token == null) {
+    showLoggedOutUI();
+} else {
+    showLoggedInUI();
+}
+
+// const login = document.getElementById("login");
+// const token = localStorage.getItem("token");
+// const name = localStorage.getItem("name");
+// const logoutButton = document.getElementById("logoutBtn");
+// function showLoggedInUI() {
+//     login.innerText = name;
+
+//     const logoutButton = document.createElement("<a>");
+//     logoutButton.innerText = "Logout";
+//     logoutButton.addEventListener("click", () => {
+//         // Clear the token and name from localStorage
+//         localStorage.removeItem("token");
+//         localStorage.removeItem("name");
+//         // Show the login UI
+//         showLoggedOutUI();
+//     });
+
+//     login.innerHTML = '';
+//     logoutButton.appendChild(logoutButton);
+// }
+
+// function showLoggedOutUI() {
+//     login.innerText = "Login";
+//     login.innerHTML = '';
+// }
+
+// if (token == null) {
+//     showLoggedOutUI();
+// } else {
+//     showLoggedInUI();
+// }
+
+
 </script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
