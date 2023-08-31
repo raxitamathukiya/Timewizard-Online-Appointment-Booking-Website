@@ -1,0 +1,99 @@
+/* Set the background color of the body */
+body {
+    background-image: url("https://img.freepik.com/premium-photo/blank-blue-cement-wall-texture-background_7190-199.jpg?w=996");
+    background-color: #f2f2f2;
+  }
+  
+  /* Center the logo */
+  #logoDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Style the logo */
+  #logo {
+    border-radius: 10px;
+
+    width: 20%;
+    height: auto;
+  }
+  
+  /* Style the header */
+/* Style the h1 tag */
+#roomID {
+    font-size: 2.5rem; /* Increase the font size */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text */
+    margin-top: 30px; /* Add some space to the top */
+    color: #1565C0; /* Set the text color to a bright orange */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Add a text shadow for depth */
+  }
+  
+  
+  /* Set the size and position of the video grid */
+  #videoDiv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px; /* Increase the gap between video elements */
+    margin: 20px auto; /* Set equal left and right margins */
+    max-width: 900px; /* Limit the maximum width of the video grid */
+  }
+  /* #videoDiv video:hover{
+    
+    border: 1px solid #1A237E;
+  } */
+  
+  /* Style the individual video elements */
+  video {
+    width: 100%;
+    height: auto; /* Change height to auto to preserve aspect ratio */
+    max-height: 100%; /* Limit height to prevent stretching */
+    object-fit: cover;
+    border-radius: 10px; /* Increase the border radius */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+
+  /* Position the controls at the bottom of the window */
+#controls {
+  
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex; /* Make the controls flex container */
+    justify-content: center; /* Center the child elements horizontally */
+    align-items: center; /* Center the child elements vertically */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5); /* Add a semi-transparent white background */
+  }
+  
+  /* Style the hangup button */
+  #hangup {
+    cursor: pointer;
+    margin-right: 20px; /* Add some space to the right of the button */
+  }
+  
+  
+  /* Style the icon images */
+  .icon {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* Style the icon colors */
+  .icon-color {
+    color: #555; /* Set the color of the icons */
+    margin-right: 20px; /* Add some space to the right of the icons */
+  }
+  
+  /* Set hover effect on icons */
+  .icon:hover {
+    cursor: pointer;
+    opacity: 0.7; /* Decrease opacity when hovering over the icons */
+  }
+  
