@@ -15,15 +15,7 @@ signbtn.addEventListener("click", (e) => {
       title: "Oops...",
       text: "Fields can't be empty",
     });
-  } 
-  else if(password.length!=4){
-    Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Password should be of 4 digit",
-      });
   }
-
   // Loader Showing
   //showLoader();
   //document.getElementById("register-button").style.visibility = "hidden";
