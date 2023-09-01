@@ -1,17 +1,12 @@
 const send = document.getElementById("send");
 const chatMessages = document.getElementById("messages");
-const roomName = document.getElementById("room-id");
-const userList = document.getElementById("members");
 
-const urlParams = new URLSearchParams(window.location.search)
-
-const room = urlParams.get("roomID");
+const room = 12;
 console.log(room);
-const username = JSON.parse(localStorage.getItem("userDetails")).name;
-// const username = "Aman"
+const username = "user"
 
 
-const socket = io("https://real-talk-chat-server.onrender.com/", { transports: ["websocket"] });
+const socket = io("https://chat-server-w0xc.onrender.com/start", { transports: ["websocket"] });
 
 socket.emit("joinRoom", ({ username, room }));
 
@@ -83,7 +78,6 @@ function outputMessage(message) {
     para.classList.add("text");
     para.innerText = message.text;
 
-
     div.appendChild(para);
     chatMessages.appendChild(div);
 }
@@ -94,31 +88,4 @@ document.getElementById('leave').addEventListener("click", ()=>{
     // socket.emit('leave', ({username, room}))
     window.location.href = "./dashboard.html";
 })
-
-
-
-
-async function userLoggedIn() {
-    const token = localStorage.getItem("token");
-    const request = await fetch(`https://talkies-authentication-server-1.onrender.com/user/check`,{
-      method:"POST",
-      headers:{
-        "content-type":"application/json",
-      },
-      body:JSON.stringify({token:token})
-    });
-  
-    const response = await request.json();
-    if(!response.ok){
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Please Login First",
-      });
-      setTimeout(()=>{
-        
-        window.location.href = "./login.html";
-      },3000)
-    }
-  }
   // userLoggedIn();
