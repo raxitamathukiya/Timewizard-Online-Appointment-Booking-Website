@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png" />
+    <link rel="manifest" href="./favicon_io/site.webmanifest" />
+    <link rel="stylesheet" href="./styles/notification.css">
+    </link>
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+    <script src="./scripts/notification.js"></script>
+    <link rel="stylesheet" href="./Style/videochat.css">
+    <title>Video-Chat</title>
+</head>
+
+<body>
+    <div id="logoDiv">
+        <img id="logo" style="width: 20%;" src="./Image/timewizard_logo.PNG" alt="" />
+    </div>
+
+    <h1 id="roomID"></h1>
+    <div id="videoDiv"></div>
+ <div id="controls">
+        <p id="hangup">
+            <a href="./dashboard.html"><img class="icon"
+                    src="https://icons.veryicon.com/png/o/miscellaneous/cloud-call-center/hang-up.png" alt="" /></a>
+        <p id="hide-video" class="icon-color"><img width="50px" class="icon" src="./Image/cam.png" alt=""></p>
+        <p id="hide-audio" class="icon-color"><img class="icon" src="./Image/mike.png" alt=""></p>
+        </p>
+    </div>
+   
+</body>b
+
+<script src="https://cdn.socket.io/4.6.0/socket.io.min.js"
+    integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
+    crossorigin="anonymous"></script>
+
+<script src="./Script/videochat.js"></script>
+
+</html>
