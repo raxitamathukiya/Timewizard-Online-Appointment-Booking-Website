@@ -8,12 +8,30 @@ signbtn.addEventListener("click", (e) => {
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
-  console.log(name,email,password)
+  console.log(name,email,password);
+  var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  var passw=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
   if(!name || !password || !email){
     Swal.fire({
       icon: "error",
       title: "Oops...",
       text: "Fields can't be empty",
+    });
+  }
+  else if(!email.match(validRegex))
+  {
+    Swal.fire({
+      icon: "error",
+      title: "Not a Valid Email...",
+      text: "Enter proper mail ID",
+    });
+  }
+  else if(!password.match(passw))
+  {
+    Swal.fire({
+      icon: "error",
+      title: "Enter Strong Password",
+      text: "Password should be between 6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter",
     });
   }
   // Loader Showing
