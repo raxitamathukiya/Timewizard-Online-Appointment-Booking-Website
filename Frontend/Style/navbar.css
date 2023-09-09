@@ -428,10 +428,10 @@ body {
     #imlogo {
       display: flex;
     }
-    /* #logo {
+    #logo {
       display: none;
 
-    } */
+    }
 
    
   }
