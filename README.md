@@ -1,4 +1,4 @@
-# medical-bells-7477
+# TimeWizard
 Website detail:To schedule a meeting, simply click the 'Schedule Meeting' button below and choose a convenient date and time from our available options. We offer flexible meeting arrangements, including in-person, online video calls, and phone meetings.
 You can see the landing page screenshot below
 
